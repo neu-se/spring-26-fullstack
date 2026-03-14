@@ -14,7 +14,7 @@
   "devDependencies": {
     "@cs4530-workspaces/shared": "^1.0.0",
     "@types/express": "^5.0.6",
-    "@types/supertest": "^6.0.3",
+    "@types/supertest": "^7.2.0",
     "@vitest/coverage-v8": "^4.0.18",
     "supertest": "^7.2.2",
     "vitest": "^4.0.18"
