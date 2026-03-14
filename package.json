@@ -14,9 +14,12 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "npm run test --workspaces",
-    "dev": "echo \"Run \\`npm run dev -w=server\\` and \\`npm run dev -w=frontend\\` separately\\n\"",
+    "dev": "concurrently -n frontend,server -c blue,green \"npm run dev -w=frontend\" \"npm run dev -w=server\"",
     "build": "npm run build -w=frontend",
     "start": "npm start -w=server",
     "playwright": "npm run playwright -w=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
