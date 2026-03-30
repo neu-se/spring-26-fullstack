@@ -14,6 +14,6 @@
 
     /* Linting */
     "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true
   }
 }
