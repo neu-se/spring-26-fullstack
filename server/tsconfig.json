@@ -15,7 +15,5 @@
     /* Linting */
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true
-  },
-  "include": ["./**/*.ts"],
-  "exclude": ["./node_modules", "./client", "./frontend"]
+  }
 }

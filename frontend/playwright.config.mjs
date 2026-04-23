@@ -3,7 +3,7 @@ import { defineConfig, devices } from "@playwright/test";
 /* global process */ // TODO: is there a better way to avoid making ESLint angry?
 export default defineConfig({
   // Where the tests live, relative to this file
-  testDir: "./frontend/tests/e2e",
+  testDir: "./tests/e2e",
 
   // Fail the build on CI if you accidentally left test.only in the source code.
   forbidOnly: !!process.env.CI,
@@ -31,13 +31,15 @@ export default defineConfig({
   webServer: [
     {
       name: "Frontend",
-      command: "npm run dev:frontend",
+      cwd: "..",
+      command: "npm run dev -w=frontend",
       reuseExistingServer: !process.env.CI,
       url: "http://localhost:5173",
     },
     {
       name: "Server",
-      command: "npm run dev:server",
+      cwd: "..",
+      command: "npm run dev -w=server",
       reuseExistingServer: !process.env.CI,
       url: "http://localhost:3000",
     },
